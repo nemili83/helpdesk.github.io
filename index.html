@@ -2,6 +2,94 @@
 <html>
   <head>
     <title>MyCoffee.rs</title>
+    
+    <header>
+  <nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle">&#9776;</label>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Coffee Blog</h1>
+</header>
+
+<style>
+  /* Navigation Styles */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu-toggle:checked ~ ul li {
+    margin: 10px 0;
+  }
+
+  #menu-toggle:checked ~ label {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    nav ul {
+      display: none;
+    }
+
+    #menu-toggle {
+      display: block;
+    }
+
+    label {
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+</style>
+
     <style>
       /* Global Styles */
       * {
