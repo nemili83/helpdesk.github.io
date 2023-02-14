@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Weather Forecast</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="weather-box">
-		<h2>Current Weather</h2>
-		<label for="city-input">Enter city name:</label>
-		<input type="text" id="city-input">
-		<button id="submit-btn">Get Weather</button>
-		<div id="result"></div>
-	</div>
-	
-	<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Weather Forecast</h1>
+    </header>
+    <main>
+      <div class="search-box">
+        <input type="text" class="search-bar" placeholder="Enter City Name">
+        <button class="search-btn">Search</button>
+      </div>
+      <div class="weather-box">
+        <div class="location"></div>
+        <div class="weather"></div>
+        <div class="temperature"></div>
+        <div class="icon"></div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Weather Forecast</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
