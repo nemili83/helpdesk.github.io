@@ -74,6 +74,7 @@ nav li {
 /* Featured Articles Section Styles */
 
 .featured {
+  margin-top: 80px;
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +124,4 @@ nav li {
 footer {
   background-color: #f9f9f9;
   padding: 20px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+  box-shadow: 0 -2px 4px rgba(
