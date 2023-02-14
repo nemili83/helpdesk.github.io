@@ -11,7 +11,7 @@ searchBtn.addEventListener('click', function() {
 });
 
 function getWeather(city) {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=55b567790d8e4eb2f61aee05734f0e86&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=55b567790d8e4eb2f61aee05734f0e86&units=metric`)
     .then(response => response.json())
     .then(data => {
       const location = `${data.name}, ${data.sys.country}`;
