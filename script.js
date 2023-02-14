@@ -5,9 +5,13 @@ const locationBox = document.querySelector('.location');
 const weatherBox = document.querySelector('.weather');
 const temperatureBox = document.querySelector('.temperature');
 const iconBox = document.querySelector('.icon');
+const resultsBox = document.querySelector('.results');
 
 searchBtn.addEventListener('click', function() {
-  getWeather(searchBar.value);
+  if (searchBar.value) {
+    resultsBox.style.display = 'block';
+    getWeather(searchBar.value);
+  }
 });
 
 function getWeather(city) {
