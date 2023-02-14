@@ -1,0 +1,10 @@
+.weather-box {
+	background-color: #f2f2f2;
+	border: 1px solid #ddd;
+	padding: 20px;
+	text-align: center;
+}
+
+#result {
+	display: none;
+}
