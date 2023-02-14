@@ -8,47 +8,6 @@
     .weather-box {
       display: none;
     }
-
-    /* Add some colors to the search box and button */
-    .search-box {
-      background-color: #f2f2f2;
-      padding: 10px;
-      border-radius: 5px;
-      display: inline-block;
-    }
-
-    .search-bar {
-      border: none;
-      padding: 5px;
-      margin-right: 5px;
-    }
-
-    .search-btn {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Add some styles to the weather result box */
-    .weather-box {
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .location {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .icon img {
-      height: 50px;
-      margin-right: 10px;
-    }
   </style>
 </head>
 <body>
@@ -76,6 +35,12 @@
 
     searchBtn.addEventListener('click', function() {
       getWeather(searchBar.value);
+    });
+
+    searchBar.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        getWeather(searchBar.value);
+      }
     });
 
     function getWeather(city) {
