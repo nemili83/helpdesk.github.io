@@ -8,10 +8,15 @@ submitBtn.addEventListener("click", () => {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			const temperature = Math.round(data.main.temp);
-			const description = data.weather[0].description;
-			document.getElementById("result").innerHTML = `Temperature: ${temperature} &deg;C<br>Description: ${description}`;
-			document.getElementById("result").style.display = "block";
+			if (data.main && data.main.temp) {
+				const temperature = Math.round(data.main.temp);
+				const description = data.weather[0].description;
+				document.getElementById("result").innerHTML = `Temperature: ${temperature} &deg;C<br>Description: ${description}`;
+				document.getElementById("result").style.display = "block";
+			} else {
+				document.getElementById("result").innerHTML = "Unable to get weather data. Please check the city name and try again.";
+				document.getElementById("result").style.display = "block";
+			}
 		})
 		.catch(error => console.log(error));
 });
